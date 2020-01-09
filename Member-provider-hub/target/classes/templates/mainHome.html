@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"> 
+<head>
+<meta charset="ISO-8859-1">
+<title>Member provider hub</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/mainHome.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">	
+<img th:src="@{/images/logo.jpg}" class="img-responsive center-block" width="220" height="200" alt="Logo" align="left"/>
+
+		<div class="card-deck">
+	        <div class="card" style="width:200px" align="center">
+	        <img th:src="@{/images/admin.png}" class="img-responsive center-block" width="220" height="200" alt="Card"/>	         <div class="card-body">
+	           <form th:action="@{/admin/adminHome}" method="get">
+                   <button class="btn btn-primary btn-block" name="admin" type="Submit">Admin</button>
+               </form>
+	         </div>
+	     </div>
+
+	     <div class="card" style="width:200px" align="center">
+		    <img th:src="@{/images/provider.png}" class="img-responsive center-block" width="220" height="200" alt="Card"/>
+		    <div class="card-body">
+		      <form th:action="@{/provider/providerHome}" method="get">
+                   <button class="btn btn-primary btn-block" name="provider" type="Submit">Provider</button>
+               </form>
+		    </div>
+		  </div>
+		 
+		  <div class="card" style="width:200px" align="center">
+		    <img th:src="@{/images/member.png}" class="img-responsive center-block" width="220" height="200" alt="Card"/>
+		    <div class="card-body">
+		       <form th:action="@{/member/memberHome}" method="get">
+                   <button class="btn btn-primary btn-block" name="member" type="Submit">Member</button>
+               </form>
+		    </div>
+		  </div>
+
+
+</div>
+</div>
+</body>
+</html>

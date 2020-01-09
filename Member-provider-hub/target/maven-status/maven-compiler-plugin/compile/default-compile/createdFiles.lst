@@ -1,0 +1,12 @@
+com\adalitek\mph\model\User.class
+com\adalitek\mph\MemberProviderHub.class
+com\adalitek\mph\model\Role$RoleBuilder.class
+com\adalitek\mph\model\User$UserBuilder.class
+com\adalitek\mph\controller\UserController.class
+com\adalitek\mph\service\UserServiceImpl.class
+com\adalitek\mph\model\Role.class
+com\adalitek\mph\config\BeanConfiguration.class
+com\adalitek\mph\repository\UserRepository.class
+com\adalitek\mph\service\UserService.class
+com\adalitek\mph\repository\RoleRepository.class
+com\adalitek\mph\config\SecurityConfiguration.class

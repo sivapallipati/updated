@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/registration.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <img th:src="@{/images/logo.jpg}" class="img-responsive center-block" width="420" height="400" alt="Logo"/>
+
+              <div class="row" id="div1">
+                      <form auto-complete="off" th:action="@{/registration}" th:object="${user}" method="post" class="form-signup" role="form">
+              
+			                <div class="form-group">
+			                    <div class="col-sm-15">
+			                        <label>First Name</label>
+			                        <input type="text" th:field="*{name}"
+			                               class="form-control"/>
+			                    </div>
+			                </div>
+
+			                <div class="form-group">
+			                    <div class="col-sm-15">
+			                        <label>Last Name</label>
+			                        <input type="text" th:field="*{lastName}"
+			                               class="form-control"/>
+			                    </div>
+			                </div>
+			                
+			                
+			                <div class="form-group">
+			                    <div class="col-sm-15">
+			                        <label>Email</label>
+			                        <input type="text" th:field="*{email}"
+			                               class="form-control"/>
+			                               
+			                    </div>
+			                </div>
+			                
+			                
+			                <div class="form-group">
+			                    <div class="col-sm-15">
+			                    <label>Password</label>
+			                        <input type="password" th:field="*{password}"
+			                            class="form-control"/> 
+			                    </div>
+			                </div>
+                
+
+			                <div class="form-group">
+			                    <div class="col-sm-18">
+			                        <button type="submit" class="btn btn-success btn-block">Submit</button>
+			                    </div>
+			                </div>
+
+                          <h2><span class="text-success" th:utext="${successMessage}"></span></h2>
+                   </form>
+               </div><br>
+     
+     
+            <div class="col-sm-18" id="sign-in">
+                <form th:action="@{/login}" method="get" class="form-signup">
+                <button class="btn btn-md btn-primary btn-block" type="Submit">Sign in</button>
+              </form>
+           </div>
+    </div>
+</body>
+</html>
